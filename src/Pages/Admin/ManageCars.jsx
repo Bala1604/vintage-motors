@@ -1,5 +1,5 @@
 import { useReducer, useState } from "react";
-import cars from "../../data/cars";
+import cars from "../Data/cars";
 
 const MIN_YEAR = 1950;
 const MAX_YEAR = 1979;
