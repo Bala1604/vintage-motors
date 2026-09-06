@@ -1,12 +1,10 @@
 import { useReducer, useState } from "react";
-import cars from "../Data/cars";
-
-const MIN_YEAR = 1950;
-const MAX_YEAR = 1979;
+import cars from "../../Data/cars";
+const ARCHIVE_YEAR = 1965;
 
 const initialState = {
   cars: cars.filter(
-    (car) => Number(car.year) >= MIN_YEAR && Number(car.year) <= MAX_YEAR
+    (car) => Number(car.year) === ARCHIVE_YEAR
   ),
 };
 
@@ -76,8 +74,8 @@ function ManageCars() {
 
     const year = Number(form.year);
 
-    if (year < MIN_YEAR || year > MAX_YEAR) {
-      return "Only vintage cars from 1950 to 1979 are allowed.";
+    if (year !== ARCHIVE_YEAR) {
+      return "Only 1965 model cars are allowed in this archive.";
     }
 
     if (Number(form.price) <= 0) {
@@ -238,11 +236,11 @@ function ManageCars() {
               <input
                 name="year"
                 type="number"
-                min="1950"
-                max="1979"
+                min={ARCHIVE_YEAR}
+                max={ARCHIVE_YEAR}
                 value={form.year}
                 onChange={handleChange}
-                placeholder="1950 - 1979"
+                placeholder="1965 only"
               />
             </div>
 

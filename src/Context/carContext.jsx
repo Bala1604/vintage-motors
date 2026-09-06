@@ -5,7 +5,7 @@ import {
   useState,
 } from "react";
 
-import carsData from "../data/cars";
+import carsData from "../Data/cars";
 
 const CarContext = createContext();
 

@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import cars from "../data/cars";
+import cars from "../Data/cars";
 import CarCard from "../Components/CarCard";
 
 function Collection() {

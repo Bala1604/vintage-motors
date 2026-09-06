@@ -1,7 +1,7 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
-import cars from "../data/cars";
+import cars from "../Data/cars";
 import { toggleFavorite } from "../Redux/favoritesSlice";
 
 function CarDetails() {

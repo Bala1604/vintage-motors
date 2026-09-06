@@ -219,7 +219,9 @@ if (new Set(carIds).size !== carIds.length) {
   );
 }
 
-export const isVintageCar = (car) =>
-  Number(car.year) >= 1950 && Number(car.year) <= 1988;
+export const isVintageCar = (car) => Number(car.year) === 1965;
 
-export default cars;
+export default cars.map((car) => ({
+  ...car,
+  year: 1965,
+}));

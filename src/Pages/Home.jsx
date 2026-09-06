@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import cars from "../data/cars";
+import cars from "../Data/cars";
 import CarCard from "../Components/CarCard";
 
 const FALLBACK_IMAGE =
